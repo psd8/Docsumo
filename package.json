@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "webpack serve --mode=development",
     "build": "webpack --progress --mode=production",
+    "start": "node serve_build.js",
     "format": "prettier --write ./src/**/*.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
