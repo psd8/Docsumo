@@ -1,0 +1,16 @@
+@import "./partials/_flex.scss";
+@import "./abstracts/variables";
+html,body{
+    &,
+     > [class*=app]{
+        margin: 0 auto;
+        height: 100%;
+    }
+    font-family: "Lato", "san-serif"!important;
+    font-weight: 400;
+}
+.loader_fullpage{
+    @extend .flex_centered;
+    height: 100%;
+    color: $primary;
+}

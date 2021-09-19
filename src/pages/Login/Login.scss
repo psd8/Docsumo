@@ -1,0 +1,78 @@
+@import '../../assets/scss/abstracts/variables';
+@import '../../assets/scss/partials/flex';
+
+.login_page{
+    background-color: $light-gray;
+    height: 100vh;
+    overflow: auto;
+}
+.login_wrapper{
+    padding: 60px 40px 24px;
+    margin: auto;
+    @media (max-width: 540px){
+        padding: 30px 15px 12px;
+    }
+}
+.login_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 370px;
+    background: $white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px hsl(0deg 0% 43% / 50%);
+    margin: auto;
+}
+.login_header{
+    position: relative;
+    padding: 42px 24px 0;
+}
+.login_image_Wrapper{
+    @extend .flex_centered;
+    width: 64px;
+    height: 64px;
+    background: $white;
+    border-radius: 50%;
+    position: absolute;
+    top: -32px;
+    left: calc(50% - 32px);
+    box-shadow: 0 -1px 0 hsl(0deg 0% 43% / 5%);
+    padding: 10px;
+    color: #4d61fc;
+    svg{
+        width: 36px;
+        height: 36px;
+    }
+}
+.login_title{
+    font-size: 22px;
+    text-align: center;
+    color: $text-color;
+    font-weight: 600;
+}
+.login_form{
+    padding: 32px 24px 24px;
+}
+.login_error_block{
+    min-height: 14px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $danger;
+    text-align: center;
+    margin-top: 14px;
+}
+.text{
+    color: $light-text-color;
+    font-size: 15px;
+    margin-right: 16px;
+}
+.singup{
+    padding: 0 24px 24px;
+}
+.login_button_loader > div{
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+    margin-right: 5px;
+}
