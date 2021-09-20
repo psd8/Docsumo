@@ -2,6 +2,7 @@
 Docsumo Login Page In React + Webpack
 
 ### Directory Structure
+>
 .
 ├── dist # Production Build
 ├── public # Contains public resource like favicon and index.html
@@ -20,8 +21,8 @@ Docsumo Login Page In React + Webpack
 └── README.md # readme file
 
 ### Stepswise Command to run project
-> npm install # first install dependencies
-> node server,js # run api server to make login endpoint up and running
+> npm install             # irst install dependencies
+> node server.js          # run api server to make login endpoint up and running
 
-> npm run dev # Run Project in Dev mode
+> npm run dev                # Run Project in Dev mode
 > npm run build && npm start # Create optimise build and run the project from that build
