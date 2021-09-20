@@ -1,9 +1,9 @@
-# Docsumo
+### Docsumo
 Docsumo Login Page In React + Webpack
 
 
-# Directory Structure
-
+### Directory Structure
+.
 ├── dist                    # Production Build
 ├── public                  # Contains public resource like favicon and index.html
 ├── src
