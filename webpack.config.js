@@ -17,10 +17,10 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env': {
         API_URL: JSON.stringify(
-          'http://localhost:8000'
+          'https://apptesting.docsumo.com'
         ),
         DEV_API_URL: JSON.stringify(
-          'http://localhost:8000'
+          'https://apptesting.docsumo.com'
         ),
       },
     }),

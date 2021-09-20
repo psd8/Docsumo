@@ -15,16 +15,16 @@ import Cookies from 'js-cookie';
 
 export default function App() {
   useEffect(() => {
-    if(Cookies.get("access_token") && window.location.pathname !== "/dashboard"){
+    if(Cookies.get("name") && window.location.pathname !== "/dashboard"){
       window.location.replace("/dashboard");
     }else{
       
-      !Cookies.get("access_token") && window.location.pathname === "/dashboard" && window.location.replace("/")
+      !Cookies.get("name") && window.location.pathname === "/dashboard" && window.location.replace("/")
     }
   },[]);
   return (
     <Suspense fallback={<Loader classes={styles.loader_fullpage} />}>
-      {Cookies.get("access_token") ? <Dashboard /> : <Login />}
+      {Cookies.get("name") ? <Dashboard /> : <Login />}
     </Suspense>
   );
 }

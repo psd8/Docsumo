@@ -31,8 +31,8 @@ function Login() {
     onSubmit: async(values) => {
       setIsLogginIn(true);
       try{
-        let token = await post(API_ROUTES.LOGIN, values);
-        Cookies.set("access_token", token.access_token);
+        let res = await post(API_ROUTES.LOGIN, values);
+        Cookies.set("name", res.data.user.full_name);
         setIsLogginIn(false);
         window.location.replace("/dashboard");
       }catch(err){
@@ -114,7 +114,7 @@ function Login() {
                   <p className={`mb-0 ${styles.text}`}>
                     Don't have an account?
                   </p>
-                  <a href="#" className="text-decoration-none">
+                  <a href="https://app.docsumo.com/signup/" className="text-decoration-none">
                     <Button text="Sign up" isOutlined />
                   </a>
                 </div>

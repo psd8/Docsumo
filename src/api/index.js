@@ -7,8 +7,8 @@ export const post = async(url, payload) => {
        let res = await fetch(baseUrl + url, {
         method: 'post',
         headers: {
-          Accept: 'application/json',
           'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*'
         },
         body: JSON.stringify(payload)
       });
@@ -16,7 +16,7 @@ export const post = async(url, payload) => {
       if(res.status >= 200 && res.status <= 299){
           return jsonres;
       }else{
-        throw new Error(jsonres.message);
+        throw new Error(jsonres.error);
       }
     }catch(err){
         throw err;
