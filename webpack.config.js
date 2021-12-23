@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+const Dotenv = require('dotenv-webpack');
 module.exports = {
   target: 'web',
   entry: path.resolve(__dirname, 'index.js'),
@@ -11,19 +11,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/index.html',
-      favicon: "./public/favicon.ico"
+      template: './public/index.html'
     }),
-    new webpack.DefinePlugin({
-      'process.env': {
-        API_URL: JSON.stringify(
-          'https://apptesting.docsumo.com'
-        ),
-        DEV_API_URL: JSON.stringify(
-          'https://apptesting.docsumo.com'
-        ),
-      },
-    }),
+    new Dotenv(),
   ],
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),

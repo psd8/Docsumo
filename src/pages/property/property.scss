@@ -1,0 +1,7 @@
+@import '../../assets/scss/abstracts/variables';
+.sidebar{
+    position: sticky;
+    top: 0;
+    background: $placeholder-color;
+    height: 100vh;
+}

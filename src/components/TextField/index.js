@@ -1,12 +1,20 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import styles from './TextField.scss';
+import { Form } from 'react-bootstrap';
 
 function TextField(props) {
   const { formik, inputProps, label, ...otherProps } = props;
-  const nameKey = inputProps.name
+  const nameKey = inputProps.name;
+
+  /******************* 
+  @purpose : Render TextField Component
+  @Parameter : {}
+  @Author : Prashant
+  ******************/
   return (
     <div className={`position-relative ${styles.input_wrapper}`}>
+      <Form.Label className={styles.input_label}>{label}</Form.Label>
       <input
         type={inputProps.type}
         name={inputProps.name}
@@ -16,8 +24,9 @@ function TextField(props) {
         value={inputProps.value}
         {...otherProps}
       />
-      <label className={`${styles.input_label}`}>{label}</label>
-      {formik.errors[nameKey] && formik.touched[nameKey] && <p className={`${styles.input_error}`}>{formik.errors[nameKey]}</p>}
+      {formik.errors[nameKey] && formik.touched[nameKey] && (
+        <p className={`${styles.input_error}`}>{formik.errors[nameKey]}</p>
+      )}
     </div>
   );
 }

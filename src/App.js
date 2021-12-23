@@ -3,28 +3,19 @@ import React, { Suspense, useEffect } from 'react';
 /***  Components  ***/
 import Loader from './components/Loader';
 
-/***  Pages  *****/
-// Login Page
-const Login = React.lazy(() => import('./pages/Login'));
-// DAshboard Page
-const Dashboard = React.lazy(() => import('./pages/Dashboard'));
+// property page
+const Property = React.lazy(() => import('./pages/property'));
 
 /***  Scss  ***/
 import styles from './assets/scss/main.scss';
-import Cookies from 'js-cookie';
 
 export default function App() {
   useEffect(() => {
-    if(Cookies.get("name") && window.location.pathname !== "/dashboard"){
-      window.location.replace("/dashboard");
-    }else{
-      
-      !Cookies.get("name") && window.location.pathname === "/dashboard" && window.location.replace("/")
-    }
-  },[]);
+    
+  }, []);
   return (
     <Suspense fallback={<Loader classes={styles.loader_fullpage} />}>
-      {Cookies.get("name") ? <Dashboard /> : <Login />}
+      <Property />
     </Suspense>
   );
 }

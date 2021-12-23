@@ -1,4 +1,5 @@
 @import '../../assets/scss/abstracts/variables';
+@import '../../components/TextField/Textfield.scss';
 @import '../../assets/scss/partials/flex';
 
 .login_page{
@@ -52,7 +53,7 @@
     font-weight: 600;
 }
 .login_form{
-    padding: 32px 24px 24px;
+    padding: 5px 24px 24px;
 }
 .login_error_block{
     min-height: 14px;
@@ -76,4 +77,15 @@
     height: 24px;
     font-size: 14px;
     margin-right: 5px;
+}
+.carpet_select{
+    @extend .inputfield;
+    padding: 0 5px;
+    color: $light-text-color;
+}
+.input_wrapper{
+    @extend .input_wrapper;
+}
+.input_label{
+    @extend .input_label;
 }
